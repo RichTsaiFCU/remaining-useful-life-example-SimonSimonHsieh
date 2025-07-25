@@ -2,7 +2,9 @@
   "name": "phm-iot-env",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "features": {
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+      "installCudnn": true
   },
   "postCreateCommand": "pip install -r requirements.txt",
   "customizations": {
@@ -10,4 +12,6 @@
       "extensions": ["ms-python.python", "ms-toolsai.jupyter"]
     }
   }
+  }
+
 }
